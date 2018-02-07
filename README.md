@@ -48,7 +48,7 @@ Other options
 -------------
 
 If you do not like prefixing native functions, you can also import them with a
-`use` statement.
+`use` statement (PHP 7 only).
 
 ```php
 use function is_array;
