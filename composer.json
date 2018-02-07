@@ -1,0 +1,29 @@
+{
+    "name": "leofeyer/optimize-native-functions-fixer",
+    "type": "library",
+    "description": "Prefixes native PHP functions which can be replaced with opcodes by the OPcache.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leo Feyer",
+            "homepage": "https://github.com/leofeyer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "friendsofphp/php-cs-fixer": "^2.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LeoFeyer\\PhpCsFixer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LeoFeyer\\PhpCsFixer\\Tests\\": "tests/"
+        }
+    }
+}
