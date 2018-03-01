@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the "optimize native functions" fixer.
  *
@@ -23,7 +21,7 @@ final class OptimizeNativeFunctionsFixer extends AbstractFixer
     /**
      * {@inheritdoc}
      */
-    public function getDefinition(): FixerDefinition
+    public function getDefinition()
     {
         return new FixerDefinition(
             'Prefix native PHP functions which can be replaced with opcodes by the OPcache.',
@@ -48,7 +46,7 @@ function foo($options)
     /**
      * {@inheritdoc}
      */
-    public function isCandidate(Tokens $tokens): bool
+    public function isCandidate(Tokens $tokens)
     {
         return $tokens->isTokenKindFound(T_STRING);
     }
@@ -56,7 +54,7 @@ function foo($options)
     /**
      * {@inheritdoc}
      */
-    public function isRisky(): bool
+    public function isRisky()
     {
         return true;
     }
@@ -64,7 +62,7 @@ function foo($options)
     /**
      * {@inheritdoc}
      */
-    public function getName(): string
+    public function getName()
     {
         return 'LeoFeyer/'.parent::getName();
     }
@@ -72,7 +70,7 @@ function foo($options)
     /**
      * {@inheritdoc}
      */
-    protected function applyFix(\SplFileInfo $file, Tokens $tokens): void
+    protected function applyFix(\SplFileInfo $file, Tokens $tokens)
     {
         $indexes = [];
         $functionNames = $this->getOptimizableFunctions();
@@ -133,7 +131,7 @@ function foo($options)
      *
      * @return string[]
      */
-    private function getOptimizableFunctions(): array
+    private function getOptimizableFunctions()
     {
         return [
             'array_slice',

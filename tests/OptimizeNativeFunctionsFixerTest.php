@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the "optimize native functions" fixer.
  *
@@ -24,7 +22,7 @@ final class OptimizeNativeFunctionsFixerTest extends AbstractFixerTestCase
      *
      * @dataProvider getTestData
      */
-    public function testAppliesTheFix(string $expected, string $input): void
+    public function testAppliesTheFix($expected, $input)
     {
         $this->doTest($expected, $input);
     }
@@ -32,7 +30,7 @@ final class OptimizeNativeFunctionsFixerTest extends AbstractFixerTestCase
     /**
      * @return array
      */
-    public function getTestData(): array
+    public function getTestData()
     {
         return [
             ['
@@ -135,7 +133,7 @@ substr();
      *
      * @return string
      */
-    protected function getFixerName(): string
+    protected function getFixerName()
     {
         return 'LeoFeyer/optimize_native_functions';
     }
@@ -145,7 +143,7 @@ substr();
      *
      * @return FixerFactory
      */
-    protected function createFixerFactory(): FixerFactory
+    protected function createFixerFactory()
     {
         return FixerFactory::create()
             ->registerCustomFixers([
