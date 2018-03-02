@@ -1,11 +1,12 @@
 <?php
 
 /*
- * This file is part of the "optimize native functions" fixer.
+ * This file is part of the "optimize native functions fixer" package.
  *
- * Copyright (c) 2018 Leo Feyer
+ * (c) Leo Feyer
  *
- * @license MIT
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace LeoFeyer\PhpCsFixer;
