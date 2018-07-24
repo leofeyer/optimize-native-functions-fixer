@@ -1,5 +1,17 @@
+Deprecated
+----------
+
+This package is no longer needed as the feature is now available in
+[PHP-CS-Fixer][3]. Use the `native_function_invocation` fixer with the
+`@compiler_optimized` option.
+
+---
+
 Optimize Native Functions Fixer
 ===============================
+
+About
+-----
 
 This custom PHP-CS-Fixer fixer prefixes native PHP functions which can be
 replaced with opcodes by the OPcache.
@@ -14,8 +26,8 @@ class MyClass
 }
 ```
 
-See [this pull request][1] to learn how prefixing an optimizable PHP function
-made the Symfony DI container 783ms faster. And see [this pull request][2] if
+See [this pull request][2] to learn how prefixing an optimizable PHP function
+made the Symfony DI container 783ms faster. And see [this pull request][3] if
 you want to learn more about how the optimization works.
 
 Installation
@@ -62,13 +74,6 @@ class MyClass
 }
 ```
 
-Native fixer
-------------
-
-There is a [pull request][3] to enhance the `native_function_invocation` fixer
-with this optimization, however, it will only be merged into the next major
-version of PHP-CS-Fixer. This package backports the feature for PHP-CS-Fixer 2.
-
-[1]: https://github.com/symfony/symfony/pull/25854
-[2]: https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/3048
-[3]: https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/3222
+[1]: https://github.com/FriendsOfPHP/PHP-CS-Fixer
+[2]: https://github.com/symfony/symfony/pull/25854
+[3]: https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/3048
